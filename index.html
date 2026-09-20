@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>الوكيل لتجارة السيارات </title>
+  <meta name="description"
+    content="الوكيل لتجارة السيارات — تصفح جميع السيارات، اعرف التفاصيل، وتواصل معنا بسهولة. أسطول متنوع من السيارات الملاكي والنقل والميكروباص بأفضل خطط التقسيط. JMC · Jetour · MG · Nissan" />
+  <meta name="keywords"
+    content="سيارات للبيع, ميكروباص, سيارات نقل, JMC, Jetour, MG, الوكيل, تقسيط سيارات, تجارة سيارات مصر" />
+  <meta name="author" content="الوكيل لتجارة السيارات" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="الوكيل لتجارة السيارات" />
+  <meta property="og:description" content="تصفح جميع السيارات، اعرف التفاصيل، وتواصل معنا بسهولة" />
+  <meta property="og:image" content="images/Hero-Section.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (logo) -->
+  <link rel="icon" href="images/logo/logo.png" type="image/png" sizes="32x32 48x48 96x96 192x192" />
+  <link rel="apple-touch-icon" href="images/logo/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons (Phosphor) -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+
+  <!-- Swiper Slider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- ============================
+     NAVBAR
+     ============================ -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="الوكيل لتجارة السيارات">
+        <img src="images/logo/logo-without-background.png" alt="الوكيل لتجارة السيارات" class="logo-light" />
+        <img src="images/logo/logo.png" alt="الوكيل لتجارة السيارات" class="logo-dark" />
+      </a>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" role="navigation" aria-label="القائمة الرئيسية">
+        <li><a href="#hero" class="nav-link active" id="nav-home-link">الرئيسية</a>
+        </li>
+        <li><a href="#about" class="nav-link">من نحن</a></li>
+        <li><a href="#fleet" class="nav-link">السيارات</a></li>
+        <li><a href="#locations" class="nav-link">الفروع</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+
+        <!-- Theme Toggle (Light / Dark) -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="تبديل الوضع الليلي / النهاري"
+          title="تغيير المظهر">
+          <i class="ph-bold ph-moon-stars" id="theme-toggle-icon"></i>
+        </button>
+
+        <!-- Get in Touch CTA -->
+        <a href="#contact" class="nav-wa btn" id="nav-wa-btn" aria-label="الانتقال لنموذج التواصل">
+          <i class="ph-fill ph-phone-call"></i>
+          <span class="wa-text">تواصل معنا</span>
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="فتح القائمة" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="القائمة المتنقلة">
+    <a href="#hero" onclick="closeMobile()">الرئيسية</a>
+    <a href="#about" onclick="closeMobile()">من نحن</a>
+    <a href="#fleet" onclick="closeMobile()">السيارات</a>
+    <a href="#locations" onclick="closeMobile()">الفروع</a>
+    <a href="#contact" onclick="closeMobile()">تواصل معنا</a>
+  </div>
+
+  <!-- ============================
+     HERO SECTION (FULL-BLEED BACKGROUND LAYOUT)
+     ============================ -->
+  <section id="hero" aria-label="القسم الرئيسي">
+    <div class="container hero-container-inner">
+
+      <!-- Text Content -->
+      <div class="hero-simple-content animate-on-scroll">
+        <div class="hero-badge-tag">
+          <span class="dot"></span>
+          <span>الوكيل لتجارة السيارات — منذ 2018</span>
+        </div>
+
+        <h1 class="hero-main-title">
+          <span class="highlight red-text">شركاء نجاحك</span>
+          <span>على الطريق</span>
+        </h1>
+
+        <p class="hero-subtitle-text">
+          تصفح جميع السيارات، اعرف التفاصيل، وتواصل معنا بسهولة — أسطول متنوع من السيارات الملاكي والنقل والميكروباص
+          بأفضل خطط التقسيط.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" id="hero-cta">
+            <i class="ph-fill ph-phone-call"></i>
+            <span>اطلب استفسارك الآن</span>
+          </a>
+          <a href="#fleet" class="btn btn-secondary" id="hero-fleet-btn">
+            <i class="ph-bold ph-cars"></i>
+            <span>تصفح السيارات</span>
+          </a>
+        </div>
+
+        <div class="hero-simple-chips">
+          <a href="https://maps.app.goo.gl/RjzJ2jumH9fHfyZ8A" target="_blank" rel="noopener" class="chip"><i
+              class="ph-fill ph-map-pin" style="color:var(--primary);"></i> <span>فرع العاشر من رمضان</span></a>
+          <span class="chip-sep">•</span>
+          <a href="https://maps.app.goo.gl/S2XFbuw6GMrh5jzZ8" target="_blank" rel="noopener" class="chip"><i
+              class="ph-fill ph-map-pin" style="color:var(--primary);"></i> <span>فرع ديرب نجم</span></a>
+          <span class="chip-sep">•</span>
+          <a href="tel:01273000048" class="chip chip-phone"><i class="ph-fill ph-phone-call"
+              style="color:var(--primary);"></i> <span>01273000048</span></a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================
+     BRANDS SECTION
+     ============================ -->
+  <section class="poster-brands-section" aria-label="الماركات المتاحة">
+    <div class="container">
+
+      <!-- Section Heading -->
+      <div class="brands-section-header">
+        <span class="section-eyebrow">OUR BRANDS</span>
+        <h2 class="brands-section-title">الماركات المتاحة <span style="color:var(--primary)">لدينا</span></h2>
+      </div>
+
+      <div class="brands-grid">
+        <div class="brand-box" title="MG">
+          <img src="images/cars-logo/mg-logo-1952.png" alt="MG" class="brand-logo-img logo-light" />
+          <img src="images/cars-logo/Mg_logo_DarkMode.png" alt="MG" class="brand-logo-img logo-dark" />
+        </div>
+        <div class="brand-box" title="NISSAN">
+          <img src="images/cars-logo/nissan-logo-2020.png" alt="NISSAN" class="brand-logo-img logo-light" />
+          <img src="images/cars-logo/nissan_logo_DarkMode.png" alt="NISSAN" class="brand-logo-img logo-dark" />
+        </div>
+        <div class="brand-box" title="JETOUR">
+          <img src="images/cars-logo/Jetour_logo.svg.webp" alt="JETOUR" class="brand-logo-img logo-light" />
+          <img src="images/cars-logo/Jetour_logo_DarkMode (1).jpg" alt="JETOUR" class="brand-logo-img logo-dark" />
+        </div>
+        <div class="brand-box" title="CHERY">
+          <img src="images/cars-logo/chery-logo-2013.png" alt="CHERY" class="brand-logo-img" />
+        </div>
+        <div class="brand-box" title="JAC">
+          <img src="images/cars-logo/jac-logo-2016.png" alt="JAC" class="brand-logo-img" />
+        </div>
+        <div class="brand-box" title="KAIYI">
+          <span class="brand-name-text">KAIYI</span>
+        </div>
+        <div class="brand-box" title="JMC">
+          <span class="brand-name-text">JMC</span>
+        </div>
+        <div class="brand-box" title="FOTON">
+          <span class="brand-name-text">FOTON</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+     ABOUT SECTION
+     ============================ -->
+  <section id="about" class="section-pad" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image -->
+        <div class="about-image-wrap animate-on-scroll">
+          <img src="images/Cars-images/IMG_7079.JPG.jpeg" alt="معرض الوكيل لتجارة السيارات" loading="lazy" />
+          <div class="about-badge-float">
+            <div class="icon"><i class="ph-fill ph-trophy"></i></div>
+            <div class="info">
+              <div class="num">2018</div>
+              <div class="text">تأسيس الشركة</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-content animate-on-scroll">
+          <div class="label">
+            <i class="ph-fill ph-info"></i>
+            <span>من نحن</span>
+          </div>
+
+          <h2 class="section-title" id="about-heading">
+            <span>الوكيل</span>
+            <span class="highlight"> لتجارة السيارات</span>
+          </h2>
+
+          <div class="about-paragraphs" id="about-text">
+            <p>
+              منذ عام 2018، يعمل الوكيل لتجارة السيارات على تقديم حلول متكاملة تلبي احتياجات العملاء في سوق السيارات، من
+              خلال مجموعة متنوعة من السيارات الملاكي، والنقل، والميكروباص، مع توفير العديد من العلامات التجارية
+              والموديلات لتناسب مختلف الاستخدامات والميزانيات.
+            </p>
+          </div>
+
+          <!-- Statistics Row -->
+          <div class="about-stats">
+            <div class="about-stat">
+              <div class="about-stat-num">+8</div>
+              <div class="about-stat-label">سنوات خبرة</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">+100</div>
+              <div class="about-stat-label">سيارة في المعرض</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-num">2</div>
+              <div class="about-stat-label">فروع متعددة</div>
+            </div>
+          </div>
+
+          <div class="about-features" aria-label="مميزات الوكيل">
+            <div class="about-feature">
+              <div class="icon"><i class="ph-fill ph-shield-check"></i></div>
+              <span>أمان ومصداقية</span>
+            </div>
+            <div class="about-feature">
+              <div class="icon"><i class="ph-fill ph-calculator"></i></div>
+              <span>أفضل أنظمة التقسيط</span>
+            </div>
+            <div class="about-feature">
+              <div class="icon"><i class="ph-fill ph-key"></i></div>
+              <span>استلام فوري</span>
+            </div>
+            <div class="about-feature">
+              <div class="icon"><i class="ph-fill ph-lightning"></i></div>
+              <span>إجراءات سريعة</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================
+     FLEET / CARS SECTION
+     ============================ -->
+  <section id="fleet" class="section-pad" aria-labelledby="fleet-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">
+          <i class="ph-fill ph-cars"></i>
+          <span>معرض السيارات</span>
+        </div>
+        <h2 class="section-title" id="fleet-heading">
+          <span>اختر سيارتك</span>
+          <span class="highlight"> القادمة</span>
+        </h2>
+        <p class="section-subtitle">
+          تصفح تشكيلتنا من السيارات — اضغط على أي سيارة لمشاهدة صورها وتفاصيلها
+        </p>
+      </div>
+
+      <!-- Single-line Streamlined Filter Bar (Search Input + Category Pills) -->
+      <div class="fleet-filter-bar animate-on-scroll">
+        <!-- Search Input with inline search icon -->
+        <div class="fleet-search-box">
+          <i class="ph-bold ph-magnifying-glass search-icon"></i>
+          <input type="text" id="fleet-search-input" placeholder="ابحث عن موديل السيارة..."
+            oninput="filterFleetCars()" />
+        </div>
+
+        <!-- Category Pills -->
+        <div class="fleet-tabs" role="tablist" aria-label="فئات السيارات">
+          <button class="fleet-tab active" id="tab-all" role="tab" aria-selected="true" onclick="switchTab('all')">
+            <i class="ph-bold ph-squares-four"></i>
+            <span>الكل</span>
+          </button>
+          <button class="fleet-tab" id="tab-malaki" role="tab" aria-selected="false" aria-controls="panel-malaki"
+            onclick="switchTab('malaki')">
+            <i class="ph-bold ph-car"></i>
+            <span>ملاكي</span>
+          </button>
+          <button class="fleet-tab" id="tab-naql" role="tab" aria-selected="false" aria-controls="panel-naql"
+            onclick="switchTab('naql')">
+            <i class="ph-bold ph-truck"></i>
+            <span>نقل</span>
+          </button>
+          <button class="fleet-tab" id="tab-micro" role="tab" aria-selected="false" aria-controls="panel-micro"
+            onclick="switchTab('micro')">
+            <i class="ph-bold ph-bus"></i>
+            <span>ميكروباص</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Slider Wrapper with Left/Right Control Arrows -->
+      <div class="fleet-slider-container">
+
+        <!-- Panel: الكل (All 15 Cars Slider) -->
+        <div id="panel-all" class="car-panel active" role="tabpanel" aria-labelledby="tab-all">
+          <div class="fleet-slider-outer">
+            <button class="fleet-slider-arrow fleet-prev-btn" aria-label="السابق">
+              <i class="ph-bold ph-caret-right"></i>
+            </button>
+
+            <div class="swiper fleet-swiper fleet-swiper-all">
+              <div class="swiper-wrapper">
+                <!-- Dynamically loaded from Cars API -->
+              </div>
+              <div class="swiper-pagination fleet-swiper-pagination"></div>
+            </div>
+
+            <button class="fleet-slider-arrow fleet-next-btn" aria-label="التالي">
+              <i class="ph-bold ph-caret-left"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel: ملاكي -->
+        <div id="panel-malaki" class="car-panel" role="tabpanel" aria-labelledby="tab-malaki">
+          <div class="fleet-slider-outer">
+            <button class="fleet-slider-arrow fleet-prev-btn" aria-label="السابق">
+              <i class="ph-bold ph-caret-right"></i>
+            </button>
+
+            <div class="swiper fleet-swiper fleet-swiper-malaki">
+              <div class="swiper-wrapper">
+                <!-- Dynamically loaded from Cars API -->
+              </div>
+              <div class="swiper-pagination fleet-swiper-pagination"></div>
+            </div>
+
+            <button class="fleet-slider-arrow fleet-next-btn" aria-label="التالي">
+              <i class="ph-bold ph-caret-left"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel: نقل -->
+        <div id="panel-naql" class="car-panel" role="tabpanel" aria-labelledby="tab-naql">
+          <div class="fleet-slider-outer">
+            <button class="fleet-slider-arrow fleet-prev-btn" aria-label="السابق">
+              <i class="ph-bold ph-caret-right"></i>
+            </button>
+
+            <div class="swiper fleet-swiper fleet-swiper-naql">
+              <div class="swiper-wrapper">
+                <!-- Dynamically loaded from Cars API -->
+              </div>
+              <div class="swiper-pagination fleet-swiper-pagination"></div>
+            </div>
+
+            <button class="fleet-slider-arrow fleet-next-btn" aria-label="التالي">
+              <i class="ph-bold ph-caret-left"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Panel: ميكروباص -->
+        <div id="panel-micro" class="car-panel" role="tabpanel" aria-labelledby="tab-micro">
+          <div class="fleet-slider-outer">
+            <button class="fleet-slider-arrow fleet-prev-btn" aria-label="السابق">
+              <i class="ph-bold ph-caret-right"></i>
+            </button>
+
+            <div class="swiper fleet-swiper fleet-swiper-micro">
+              <div class="swiper-wrapper">
+                <!-- Dynamically loaded from Cars API -->
+              </div>
+              <div class="swiper-pagination fleet-swiper-pagination"></div>
+            </div>
+
+            <button class="fleet-slider-arrow fleet-next-btn" aria-label="التالي">
+              <i class="ph-bold ph-caret-left"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ============================
+     SHOWROOM BRANCHES & CONTACT CAPSULE BANNER (POSTER BOTTOM BAR)
+     ============================ -->
+
+
+  <!-- ============================
+     LOCATIONS SECTION
+     ============================ -->
+  <section id="locations" class="section-pad" aria-labelledby="locations-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">
+          <i class="ph-fill ph-map-pin"></i>
+          <span>فروعنا</span>
+        </div>
+        <h2 class="section-title" id="locations-heading">
+          <span>تجدنا</span>
+          <span class="highlight"> في أقرب فرع لك</span>
+        </h2>
+        <p class="section-subtitle">
+          فروعنا جاهزة لخدمتكم بأفضل فريق مبيعات واستشارات
+        </p>
+      </div>
+
+      <div class="locations-wrapper max-w-4xl">
+        <!-- 2-Column Responsive Branches Grid -->
+        <div class="branches-grid">
+
+          <!-- Branch 1: 10th of Ramadan -->
+          <div class="branch-card animate-on-scroll">
+            <div class="branch-card-header">
+              <h3 class="branch-name">فرع العاشر من رمضان
+              </h3>
+            </div>
+            <div class="branch-details-list">
+              <div class="branch-detail-row">
+                <i class="ph-bold ph-map-pin icon-mono"></i>
+                <span>العنوان: مول المنال — العاشر من رمضان</span>
+              </div>
+              <div class="branch-detail-row">
+                <i class="ph-bold ph-clock icon-mono"></i>
+                <span>أوقات العمل: يومياً من 11:00 ص حتى 11:00 م</span>
+              </div>
+              <div class="branch-detail-row">
+                <i class="ph-bold ph-phone icon-mono"></i>
+                <span>
+                  <span>الهاتف: </span>
+                  <a href="tel:01273000048" class="branch-tel-link" dir="ltr">01273000048</a>
+                </span>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/RjzJ2jumH9fHfyZ8A" target="_blank" rel="noopener noreferrer"
+              class="btn-branch-gmaps">
+              <i class="ph-bold ph-arrow-square-out"></i>
+              <span>افتح الموقع في خرائط Google</span>
+            </a>
+          </div>
+
+          <!-- Branch 2: Deyrb Negm -->
+          <div class="branch-card animate-on-scroll">
+            <div class="branch-card-header">
+              <h3 class="branch-name">فرع ديرب نجم</h3>
+
+            </div>
+            <div class="branch-details-list">
+              <div class="branch-detail-row">
+                <i class="ph-bold ph-map-pin icon-mono"></i>
+                <span>العنوان: محافظة الشرقية — ديرب نجم</span>
+              </div>
+              <div class="branch-detail-row">
+                <i class="ph-bold ph-clock icon-mono"></i>
+                <span>أوقات العمل: يومياً من 11:00 ص حتى 11:00 م</span>
+              </div>
+              <div class="branch-detail-row">
+                <i class="ph-bold ph-phone icon-mono"></i>
+                <span>
+                  <span>الهاتف: </span>
+                  <a href="tel:01273000048" class="branch-tel-link" dir="ltr">01273000048</a>
+                </span>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/S2XFbuw6GMrh5jzZ8" target="_blank" rel="noopener noreferrer"
+              class="btn-branch-gmaps">
+              <i class="ph-bold ph-arrow-square-out"></i>
+              <span>افتح الموقع في خرائط Google</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+     CONTACT / LEAD FORM SECTION
+     ============================ -->
+  <section id="contact" class="section-pad" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">
+          <i class="ph-fill ph-phone-call"></i>
+          <span>تواصل معنا</span>
+        </div>
+        <h2 class="section-title" id="contact-heading">
+          <span>اطلب</span>
+          <span class="highlight"> استفسارك الآن</span>
+        </h2>
+        <p class="section-subtitle">
+          أترك بياناتك وسيتواصل معك فريق المبيعات في أقرب وقت
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Lead Form -->
+        <div class="lead-form-wrap animate-on-scroll">
+          <h3 class="form-title">بيانات الاستفسار</h3>
+          <p class="form-subtitle">
+            املأ البيانات التالية وسنتواصل معك في أقرب وقت ممكن
+          </p>
+
+          <form id="lead-form" novalidate>
+            <div class="form-grid">
+
+              <!-- Name -->
+              <div class="form-group">
+                <label for="f-name">
+                  <span>الاسم</span>
+                  <span class="req">*</span>
+                </label>
+                <input type="text" id="f-name" name="name" required placeholder="مثال: أحمد محمد" />
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="f-phone">
+                  <span>رقم الهاتف</span>
+                  <span class="req">*</span>
+                </label>
+                <input type="tel" id="f-phone" name="phone" required placeholder="01xxxxxxxxx" dir="ltr" />
+              </div>
+
+              <!-- Category -->
+              <div class="form-group">
+                <label for="f-category">
+                  <span>الفئة المهتم بها</span>
+                  <span class="req">*</span>
+                </label>
+                <select id="f-category" name="category" required>
+                  <option value="">-- اختر الفئة --</option>
+                  <option value="ملاكي">سيارة ملاكي</option>
+                  <option value="نقل">سيارة نقل</option>
+                  <option value="ميكروباص">ميكروباص</option>
+                  <option value="غير محدد">لم أحدد بعد</option>
+                </select>
+              </div>
+
+              <!-- Model -->
+              <div class="form-group">
+                <label for="f-model">
+                  <span>الموديل / اسم السيارة</span>
+                </label>
+                <input type="text" id="f-model" name="model" placeholder="مثال: تويوتا كورولا" />
+              </div>
+
+              <!-- Payment Type (Cash / Installment) -->
+              <div class="form-group full">
+                <label>
+                  <span>نظام الشراء</span>
+                  <span class="req">*</span>
+                </label>
+                <div class="payment-options">
+                  <label class="payment-option" id="opt-cash">
+                    <input type="radio" name="payment" value="كاش" required />
+                    <i class="ph-fill ph-money"></i>
+                    <span>كاش</span>
+                  </label>
+                  <label class="payment-option" id="opt-install">
+                    <input type="radio" name="payment" value="تقسيط" />
+                    <i class="ph-fill ph-calendar-dots"></i>
+                    <span>تقسيط</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Details / Notes -->
+              <div class="form-group full">
+                <label for="f-details">
+                  <span>تفاصيل / ملاحظات إضافية</span>
+                </label>
+                <textarea id="f-details" name="details" placeholder="أي تفاصيل إضافية أو متطلبات خاصة..."></textarea>
+              </div>
+
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary form-submit" id="form-submit-btn">
+              <i class="ph-fill ph-paper-plane-tilt"></i>
+              <span>ارسال</span>
+            </button>
+          </form>
+
+          <!-- Success -->
+          <div class="form-success" id="form-success" aria-live="polite">
+            <div class="success-icon"><i class="ph-fill ph-check-circle" style="font-size:2.5rem; color:#10b981;"></i>
+            </div>
+            <h3>تم الإرسال بنجاح!</h3>
+            <p>
+              سيتواصل معك فريق المبيعات قريباً. شكراً لثقتك في الوكيل!
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-wrap animate-on-scroll">
+          <div>
+            <h3 class="contact-info-title">معلومات التواصل</h3>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:24px;">
+              نحن هنا للإجابة على جميع استفساراتك
+            </p>
+          </div>
+
+          <div class="contact-items">
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/elwakeel_for_car_trade" target="_blank" rel="noopener" class="contact-item"
+              id="contact-insta">
+              <div class="contact-item-icon brand"><i class="ph-fill ph-instagram-logo"></i></div>
+              <div class="contact-item-info">
+                <div class="label">إنستغرام</div>
+                <div class="value" dir="ltr">elwakeel_for_car_trade</div>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:01273000048" class="contact-item" id="contact-phone1">
+              <div class="contact-item-icon brand"><i class="ph-fill ph-phone-call"></i></div>
+              <div class="contact-item-info">
+                <div class="label">اتصال مباشر</div>
+                <div class="value" dir="ltr">012 73000048</div>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elwakeel.motors@gmail.com" target="_blank"
+              rel="noopener" class="contact-item" id="contact-email" title="أرسل بريد إلكتروني">
+              <div class="contact-item-icon brand"><i class="ph-fill ph-envelope-simple"></i></div>
+              <div class="contact-item-info">
+                <div class="label">البريد الإلكتروني</div>
+                <div class="value" dir="ltr">elwakeel.motors@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/201273000048" target="_blank" rel="noopener" class="contact-item" id="contact-wa">
+              <div class="contact-item-icon brand"><i class="ph-fill ph-whatsapp-logo"></i></div>
+              <div class="contact-item-info">
+                <div class="label">واتساب</div>
+                <div class="value" dir="ltr">+20 12 73000048</div>
+              </div>
+            </a>
+
+            <!-- Messenger -->
+            <a href="https://m.me/ElwakeelForCarTrade" target="_blank" rel="noopener" class="contact-item"
+              id="contact-messenger">
+              <div class="contact-item-icon brand"><i class="ph-fill ph-messenger-logo"></i></div>
+              <div class="contact-item-info">
+                <div class="label">فيسبوك ماسينجر</div>
+                <div class="value">El wakeel for car trade - الوكيل لتجارة السيارات</div>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Social Quick Links -->
+          <div style="margin-top:20px;">
+            <p class="social-links-title" style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">
+              تابعنا على السوشيال ميديا
+            </p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/elwakeel_for_car_trade" target="_blank" rel="noopener"
+                class="social-link" aria-label="Instagram">
+                <i class="ph-fill ph-instagram-logo"></i>
+              </a>
+              <a href="https://m.me/ElwakeelForCarTrade" target="_blank" rel="noopener" class="social-link"
+                aria-label="Messenger">
+                <i class="ph-fill ph-messenger-logo"></i>
+              </a>
+              <a href="https://wa.me/201273000048" target="_blank" rel="noopener" class="social-link"
+                aria-label="WhatsApp">
+                <i class="ph-fill ph-whatsapp-logo"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA section hidden — hero now uses this design -->
+  <section id="cta-final" style="display:none;" aria-hidden="true">
+    <div class="container">
+      <div class="cta-final-inner">
+
+        <!-- Content -->
+        <div class="cta-final-content animate-on-scroll">
+          <div class="cta-final-eyebrow">AL WAKEEL CARS</div>
+          <h2 class="cta-final-title">
+            جاهز لسيارتك <span>القادمة؟</span>
+          </h2>
+          <p class="cta-final-text">
+            اكتشف السيارة المناسبة لك من أسطولنا المتنوع وتواصل معنا اليوم —
+            فريق المبيعات جاهز للإجابة على جميع استفساراتك.
+          </p>
+          <div class="cta-final-actions">
+            <a href="#contact" class="btn btn-primary" id="cta-final-contact-btn">
+              <i class="ph-fill ph-phone-call"></i>
+              <span>تواصل معنا</span>
+            </a>
+            <a href="#fleet" class="btn btn-secondary" id="cta-final-fleet-btn"
+              style="background:rgba(255,255,255,0.08); color:#fff; border-color:rgba(255,255,255,0.2);">
+              <i class="ph-bold ph-cars"></i>
+              <span>تصفح السيارات</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="cta-final-image animate-on-scroll">
+          <img src="images/Background.png" alt="الوكيل لتجارة السيارات" loading="lazy" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================
+     FOOTER
+     ============================ -->
+  <footer role="contentinfo">
+    <div class="container">
+
+      <!-- Multi-Column Footer Grid -->
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <a href="#hero" aria-label="الوكيل لتجارة السيارات">
+              <img src="images/logo/logo.png" alt="الوكيل لتجارة السيارات" />
+            </a>
+          </div>
+          <p class="footer-tagline">
+            معرض سيارات متكامل في خدمتكم منذ 2018 — أسطول متنوع من السيارات الملاكي والنقل والميكروباص بأفضل خطط
+            التقسيط.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/elwakeel_for_car_trade" target="_blank" rel="noopener"
+              class="footer-social-link" aria-label="Instagram">
+              <i class="ph-fill ph-instagram-logo"></i>
+            </a>
+            <a href="https://m.me/ElwakeelForCarTrade" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Messenger">
+              <i class="ph-fill ph-messenger-logo"></i>
+            </a>
+            <a href="https://wa.me/201273000048" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="WhatsApp">
+              <i class="ph-fill ph-whatsapp-logo"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Column -->
+        <div class="footer-col">
+          <div class="footer-col-title">التنقل</div>
+          <div class="footer-col-links">
+            <a href="#hero">الرئيسية</a>
+            <a href="#fleet">السيارات</a>
+            <a href="#about">من نحن</a>
+            <a href="#locations">الفروع</a>
+            <a href="#contact">تواصل معنا</a>
+          </div>
+        </div>
+
+        <!-- Branches Column -->
+        <div class="footer-col">
+          <div class="footer-col-title">فروعنا</div>
+          <div class="footer-branch-item">
+            <strong>فرع ديرب نجم</strong>
+            <span>محافظة الشرقية — ديرب نجم</span>
+          </div>
+          <div class="footer-branch-item">
+            <strong>فرع العاشر من رمضان</strong>
+            <span>مول المنال — العاشر من رمضان</span>
+          </div>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <div class="footer-col-title">تواصل معنا</div>
+          <a href="tel:01273000048" class="footer-contact-item">
+            <i class="ph-fill ph-phone-call"></i>
+            <span dir="ltr">012 73000048</span>
+          </a>
+          <a href="https://wa.me/201273000048" target="_blank" rel="noopener" class="footer-contact-item">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+            <span dir="ltr">+20 12 73000048</span>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elwakeel.motors@gmail.com" target="_blank"
+            rel="noopener" class="footer-contact-item">
+            <i class="ph-fill ph-envelope-simple"></i>
+            <span>elwakeel.motors@gmail.com</span>
+          </a>
+          <a href="https://instagram.com/elwakeel_for_car_trade" target="_blank" rel="noopener"
+            class="footer-contact-item">
+            <i class="ph-fill ph-instagram-logo"></i>
+            <span>elwakeel_for_car_trade</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="year"></span>
+          الوكيل لتجارة السيارات
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/201273000048" target="_blank" rel="noopener" class="wa-float" id="wa-float-btn"
+    aria-label="تواصل عبر واتساب">
+    <i class="ph-fill ph-whatsapp-logo"></i>
+  </a>
+
+  <!-- ============================
+     CAR MODAL
+     ============================ -->
+  <div id="car-modal" class="car-modal" aria-hidden="true" role="dialog" aria-labelledby="car-modal-title">
+    <div class="car-modal-overlay" data-close-modal></div>
+    <div class="car-modal-content">
+      <button class="car-modal-close" data-close-modal aria-label="إغلاق">&times;</button>
+      <div class="car-modal-body">
+        <div class="car-modal-gallery">
+          <img id="car-modal-main-image" src="" alt="Car Image" />
+          <button id="car-modal-prev" class="car-modal-nav prev" aria-label="الصورة السابقة">&lt;</button>
+          <button id="car-modal-next" class="car-modal-nav next" aria-label="الصورة التالية">&gt;</button>
+          <div id="car-modal-thumbs" class="car-modal-thumbs"></div>
+        </div>
+        <div class="car-modal-details">
+          <div class="car-modal-header">
+            <span id="car-modal-brand" class="brand-badge"></span>
+            <h3 id="car-modal-title"></h3>
+          </div>
+          <div id="car-modal-pills" class="car-modal-pills"></div>
+          <p id="car-modal-description"></p>
+          <div id="car-modal-specs" class="car-modal-specs"></div>
+          <button id="car-modal-whatsapp" class="btn btn-whatsapp" style="margin-top:auto;">
+            <i class="ph-fill ph-whatsapp-logo"></i>
+            <span>استفسر الآن عبر واتساب</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
