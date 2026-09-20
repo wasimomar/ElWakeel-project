@@ -372,8 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarModal();
 
   // Show Skeleton Loaders immediately while API is fetching
-  renderSkeletonLoaders();
-  initFleetSliders();
+  if (document.querySelector('.fleet-swiper')) {
+    renderSkeletonLoaders();
+    initFleetSliders();
+  }
 
   // Fetch cars dynamically from Backend API
   fetchAndRenderCars();
@@ -398,6 +400,7 @@ async function fetchAndRenderCars() {
   }
 
   renderAllPanels(fetchedCarsList);
+  initUrlCategorySync();
 }
 
 function renderAllPanels(cars) {
@@ -695,7 +698,57 @@ window.addEventListener('resize', () => {
   }
 });
 
-function switchTab(tabId) {
+/* ============================
+   URL PARAMETER SYNCHRONIZATION
+   ============================ */
+function initUrlCategorySync() {
+  const params = new URLSearchParams(window.location.search);
+  const categoryParam = params.get('category');
+
+  if (categoryParam) {
+    const decodedCategory = decodeURIComponent(categoryParam).trim();
+    let targetTab = 'all';
+
+    if (decodedCategory.includes('ملاكي') || decodedCategory.toLowerCase() === 'malaki') {
+      targetTab = 'malaki';
+    } else if (decodedCategory.includes('نقل') || decodedCategory.toLowerCase() === 'naql') {
+      targetTab = 'naql';
+    } else if (decodedCategory.includes('ميكروباص') || decodedCategory.toLowerCase() === 'micro') {
+      targetTab = 'micro';
+    } else if (decodedCategory.includes('الكل') || decodedCategory.toLowerCase() === 'all') {
+      targetTab = 'all';
+    }
+
+    switchTab(targetTab, false);
+  }
+}
+
+function updateCategoryUrl(tabId) {
+  if (!window.history || !window.history.pushState) return;
+
+  const url = new URL(window.location.href);
+  const categoryMap = {
+    'malaki': 'ملاكي',
+    'naql': 'نقل',
+    'micro': 'ميكروباص',
+    'all': 'الكل'
+  };
+
+  const catValue = categoryMap[tabId];
+  if (catValue && catValue !== 'الكل') {
+    url.searchParams.set('category', catValue);
+  } else {
+    url.searchParams.delete('category');
+  }
+
+  window.history.pushState({ path: url.href }, '', url.href);
+}
+
+window.addEventListener('popstate', () => {
+  initUrlCategorySync();
+});
+
+function switchTab(tabId, updateUrl = true) {
   activeFleetTab = tabId;
 
   document.querySelectorAll('.fleet-tab').forEach(t => {
@@ -725,6 +778,10 @@ function switchTab(tabId) {
 
   updatePanelSliderControls(tabId);
   filterFleetCars();
+
+  if (updateUrl) {
+    updateCategoryUrl(tabId);
+  }
 }
 
 function resetFleetSearch() {
@@ -879,6 +936,8 @@ function inquireCar(modelName) {
     setTimeout(() => {
       document.getElementById('f-name')?.focus();
     }, 450);
+  } else {
+    window.location.href = `cars.html#contact`;
   }
 }
 

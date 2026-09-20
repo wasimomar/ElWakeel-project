@@ -514,6 +514,29 @@ body.dark-mode .nav-logo .logo-dark {
   box-shadow: var(--shadow-red-lg);
 }
 
+/* Back Button in navbar */
+.nav-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: var(--r-pill);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border);
+  transition: var(--tx);
+  box-shadow: var(--shadow-xs);
+  text-decoration: none;
+}
+.nav-back-btn:hover {
+  background: var(--primary-glow);
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -3287,3 +3310,48 @@ body:not(.dark-mode) .car-img-wrap::before {
   align-items: center;
   gap: 8px;
 }
+
+/* ============================
+   CATEGORY SHOWCASE CARDS (HOME PAGE) & DARK MODE
+   ============================ */
+.showcase-card {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border) !important;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+
+.showcase-card:hover {
+  border-color: rgba(233, 35, 38, 0.35) !important;
+}
+
+body.dark-mode .showcase-card {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border) !important;
+}
+
+body.dark-mode .showcase-card h3 {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .showcase-card p {
+  color: var(--text-secondary) !important;
+}
+
+body.dark-mode .showcase-card .showcase-btn {
+  border-color: var(--border) !important;
+}
+
+body.dark-mode .showcase-card .showcase-btn div {
+  background-color: rgba(233, 35, 38, 0.15) !important;
+}
+
+body.dark-mode .showcase-card:hover .showcase-btn div {
+  background-color: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+/* Catalog Page Hero Banner */
+body.dark-mode .catalog-hero-banner {
+  background: linear-gradient(180deg, #05070a 0%, #0b0e14 100%) !important;
+}
+

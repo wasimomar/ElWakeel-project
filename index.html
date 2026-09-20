@@ -36,6 +36,9 @@
   <!-- Swiper Slider CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -59,11 +62,11 @@
 
       <!-- Nav Links -->
       <ul class="nav-links" role="navigation" aria-label="القائمة الرئيسية">
-        <li><a href="#hero" class="nav-link active" id="nav-home-link">الرئيسية</a>
+        <li><a href="index.html#hero" class="nav-link active" id="nav-home-link">الرئيسية</a>
         </li>
-        <li><a href="#about" class="nav-link">من نحن</a></li>
-        <li><a href="#fleet" class="nav-link">السيارات</a></li>
-        <li><a href="#locations" class="nav-link">الفروع</a></li>
+        <li><a href="index.html#about" class="nav-link">من نحن</a></li>
+        <li><a href="cars.html" class="nav-link">السيارات</a></li>
+        <li><a href="index.html#locations" class="nav-link">الفروع</a></li>
       </ul>
 
       <!-- Actions -->
@@ -76,7 +79,7 @@
         </button>
 
         <!-- Get in Touch CTA -->
-        <a href="#contact" class="nav-wa btn" id="nav-wa-btn" aria-label="الانتقال لنموذج التواصل">
+        <a href="index.html#contact" class="nav-wa btn" id="nav-wa-btn" aria-label="الانتقال لنموذج التواصل">
           <i class="ph-fill ph-phone-call"></i>
           <span class="wa-text">تواصل معنا</span>
         </a>
@@ -92,11 +95,11 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="القائمة المتنقلة">
-    <a href="#hero" onclick="closeMobile()">الرئيسية</a>
-    <a href="#about" onclick="closeMobile()">من نحن</a>
-    <a href="#fleet" onclick="closeMobile()">السيارات</a>
-    <a href="#locations" onclick="closeMobile()">الفروع</a>
-    <a href="#contact" onclick="closeMobile()">تواصل معنا</a>
+    <a href="index.html#hero" onclick="closeMobile()">الرئيسية</a>
+    <a href="index.html#about" onclick="closeMobile()">من نحن</a>
+    <a href="cars.html" onclick="closeMobile()">السيارات</a>
+    <a href="index.html#locations" onclick="closeMobile()">الفروع</a>
+    <a href="index.html#contact" onclick="closeMobile()">تواصل معنا</a>
   </div>
 
   <!-- ============================
@@ -118,7 +121,7 @@
         </h1>
 
         <p class="hero-subtitle-text">
-          تصفح جميع السيارات، اعرف التفاصيل، وتواصل معنا بسهولة — أسطول متنوع من السيارات الملاكي والنقل والميكروباص
+          تصفح جميع السيارات، اعرف التفاصيل، وتواصل معنا بسهولة — معرض متنوع من السيارات الملاكي والنقل والميكروباص
           بأفضل خطط التقسيط.
         </p>
 
@@ -127,7 +130,7 @@
             <i class="ph-fill ph-phone-call"></i>
             <span>اطلب استفسارك الآن</span>
           </a>
-          <a href="#fleet" class="btn btn-secondary" id="hero-fleet-btn">
+          <a href="cars.html" class="btn btn-secondary" id="hero-fleet-btn">
             <i class="ph-bold ph-cars"></i>
             <span>تصفح السيارات</span>
           </a>
@@ -274,140 +277,138 @@
 
 
   <!-- ============================
-     FLEET / CARS SECTION
+     FLEET / CAR SHOWCASE SECTION
      ============================ -->
   <section id="fleet" class="section-pad" aria-labelledby="fleet-heading">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header text-center mb-12">
         <div class="label">
           <i class="ph-fill ph-cars"></i>
           <span>معرض السيارات</span>
         </div>
         <h2 class="section-title" id="fleet-heading">
-          <span>اختر سيارتك</span>
-          <span class="highlight"> القادمة</span>
+          <span>تصفح فئات</span>
+          <span class="highlight"> سياراتنا</span>
         </h2>
         <p class="section-subtitle">
-          تصفح تشكيلتنا من السيارات — اضغط على أي سيارة لمشاهدة صورها وتفاصيلها
+          اختر الفئة المناسبة لك واستكشف جميع السيارات المتاحة للبيع والتقسيط بالمعرض
         </p>
       </div>
 
-      <!-- Single-line Streamlined Filter Bar (Search Input + Category Pills) -->
-      <div class="fleet-filter-bar animate-on-scroll">
-        <!-- Search Input with inline search icon -->
-        <div class="fleet-search-box">
-          <i class="ph-bold ph-magnifying-glass search-icon"></i>
-          <input type="text" id="fleet-search-input" placeholder="ابحث عن موديل السيارة..."
-            oninput="filterFleetCars()" />
-        </div>
+      <!-- 3 High-Impact Category Showcase Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
 
-        <!-- Category Pills -->
-        <div class="fleet-tabs" role="tablist" aria-label="فئات السيارات">
-          <button class="fleet-tab active" id="tab-all" role="tab" aria-selected="true" onclick="switchTab('all')">
-            <i class="ph-bold ph-squares-four"></i>
-            <span>الكل</span>
-          </button>
-          <button class="fleet-tab" id="tab-malaki" role="tab" aria-selected="false" aria-controls="panel-malaki"
-            onclick="switchTab('malaki')">
-            <i class="ph-bold ph-car"></i>
-            <span>ملاكي</span>
-          </button>
-          <button class="fleet-tab" id="tab-naql" role="tab" aria-selected="false" aria-controls="panel-naql"
-            onclick="switchTab('naql')">
-            <i class="ph-bold ph-truck"></i>
-            <span>نقل</span>
-          </button>
-          <button class="fleet-tab" id="tab-micro" role="tab" aria-selected="false" aria-controls="panel-micro"
-            onclick="switchTab('micro')">
-            <i class="ph-bold ph-bus"></i>
-            <span>ميكروباص</span>
-          </button>
-        </div>
+        <!-- Card 1: ملاكي -->
+        <a href="cars.html?category=ملاكي"
+          class="showcase-card rounded-2xl border border-gray-150 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 bg-white group cursor-pointer flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-gray-100">
+            <img
+              src="https://res.cloudinary.com/ww3gequp/image/upload/v1789772245/el-wakeel/cars/u7cgkwhg0x5bvwmvhaym.jpg"
+              alt="سيارات ملاكي" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              loading="lazy" />
+            <div
+              class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+              <i class="ph-bold ph-car text-sm"></i>
+              <span>ملاكي</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3
+                class="text-xl font-bold text-gray-900 group-hover:text-red-600 transition duration-300 mb-2 font-cairo">
+                سيارات ملاكي</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6 font-cairo">
+                أفضل موديلات السيارات الملاكي الفاخرة والاقتصادية بأسعار منافسة وأنظمة تقسيط مرنة تناسب ميزانيتك.
+              </p>
+            </div>
+            <div
+              class="showcase-btn flex items-center justify-between text-red-600 font-bold text-sm pt-4 border-t border-gray-100 group-hover:text-red-700">
+              <span class="font-cairo">تصفح سيارات ملاكي</span>
+              <div
+                class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition duration-300">
+                <i class="ph-bold ph-arrow-left text-base"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2: نقل -->
+        <a href="cars.html?category=نقل"
+          class="showcase-card rounded-2xl border border-gray-150 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 bg-white group cursor-pointer flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-gray-100">
+            <img
+              src="https://res.cloudinary.com/ww3gequp/image/upload/v1789775264/el-wakeel/cars/oquskmibx1fck0gcnqw7.jpg"
+              alt="سيارات نقل" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              loading="lazy" />
+            <div
+              class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+              <i class="ph-bold ph-truck text-sm"></i>
+              <span>نقل</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3
+                class="text-xl font-bold text-gray-900 group-hover:text-red-600 transition duration-300 mb-2 font-cairo">
+                سيارات نقل</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6 font-cairo">
+                شاحنات ونقل تجاري قوي للعمل الشاق، حمولات متعددة وكفاءة عالية على الطرق السريعة للشركات والأفراد.
+              </p>
+            </div>
+            <div
+              class="showcase-btn flex items-center justify-between text-red-600 font-bold text-sm pt-4 border-t border-gray-100 group-hover:text-red-700">
+              <span class="font-cairo">تصفح سيارات النقل</span>
+              <div
+                class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition duration-300">
+                <i class="ph-bold ph-arrow-left text-base"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3: ميكروباص -->
+        <a href="cars.html?category=ميكروباص"
+          class="showcase-card rounded-2xl border border-gray-150 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 bg-white group cursor-pointer flex flex-col">
+          <div class="relative h-60 overflow-hidden bg-gray-100">
+            <img
+              src="https://res.cloudinary.com/ww3gequp/image/upload/v1789775647/el-wakeel/cars/xcjfacbqlxh7y4sue7wa.jpg"
+              alt="ميكروباص" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              loading="lazy" />
+            <div
+              class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+              <i class="ph-bold ph-bus text-sm"></i>
+              <span>ميكروباص</span>
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow justify-between">
+            <div>
+              <h3
+                class="text-xl font-bold text-gray-900 group-hover:text-red-600 transition duration-300 mb-2 font-cairo">
+                ميكروباص</h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-6 font-cairo">
+                ميكروباصات حديثة مجهزة للرحلات ونقل الركاب بأعلى معايير الراحة والأمان وقوة الاعتمادية.
+              </p>
+            </div>
+            <div
+              class="showcase-btn flex items-center justify-between text-red-600 font-bold text-sm pt-4 border-t border-gray-100 group-hover:text-red-700">
+              <span class="font-cairo">تصفح الميكروباصات</span>
+              <div
+                class="w-8 h-8 rounded-full bg-red-50 flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition duration-300">
+                <i class="ph-bold ph-arrow-left text-base"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
       </div>
 
-      <!-- Main Slider Wrapper with Left/Right Control Arrows -->
-      <div class="fleet-slider-container">
-
-        <!-- Panel: الكل (All 15 Cars Slider) -->
-        <div id="panel-all" class="car-panel active" role="tabpanel" aria-labelledby="tab-all">
-          <div class="fleet-slider-outer">
-            <button class="fleet-slider-arrow fleet-prev-btn" aria-label="السابق">
-              <i class="ph-bold ph-caret-right"></i>
-            </button>
-
-            <div class="swiper fleet-swiper fleet-swiper-all">
-              <div class="swiper-wrapper">
-                <!-- Dynamically loaded from Cars API -->
-              </div>
-              <div class="swiper-pagination fleet-swiper-pagination"></div>
-            </div>
-
-            <button class="fleet-slider-arrow fleet-next-btn" aria-label="التالي">
-              <i class="ph-bold ph-caret-left"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Panel: ملاكي -->
-        <div id="panel-malaki" class="car-panel" role="tabpanel" aria-labelledby="tab-malaki">
-          <div class="fleet-slider-outer">
-            <button class="fleet-slider-arrow fleet-prev-btn" aria-label="السابق">
-              <i class="ph-bold ph-caret-right"></i>
-            </button>
-
-            <div class="swiper fleet-swiper fleet-swiper-malaki">
-              <div class="swiper-wrapper">
-                <!-- Dynamically loaded from Cars API -->
-              </div>
-              <div class="swiper-pagination fleet-swiper-pagination"></div>
-            </div>
-
-            <button class="fleet-slider-arrow fleet-next-btn" aria-label="التالي">
-              <i class="ph-bold ph-caret-left"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Panel: نقل -->
-        <div id="panel-naql" class="car-panel" role="tabpanel" aria-labelledby="tab-naql">
-          <div class="fleet-slider-outer">
-            <button class="fleet-slider-arrow fleet-prev-btn" aria-label="السابق">
-              <i class="ph-bold ph-caret-right"></i>
-            </button>
-
-            <div class="swiper fleet-swiper fleet-swiper-naql">
-              <div class="swiper-wrapper">
-                <!-- Dynamically loaded from Cars API -->
-              </div>
-              <div class="swiper-pagination fleet-swiper-pagination"></div>
-            </div>
-
-            <button class="fleet-slider-arrow fleet-next-btn" aria-label="التالي">
-              <i class="ph-bold ph-caret-left"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Panel: ميكروباص -->
-        <div id="panel-micro" class="car-panel" role="tabpanel" aria-labelledby="tab-micro">
-          <div class="fleet-slider-outer">
-            <button class="fleet-slider-arrow fleet-prev-btn" aria-label="السابق">
-              <i class="ph-bold ph-caret-right"></i>
-            </button>
-
-            <div class="swiper fleet-swiper fleet-swiper-micro">
-              <div class="swiper-wrapper">
-                <!-- Dynamically loaded from Cars API -->
-              </div>
-              <div class="swiper-pagination fleet-swiper-pagination"></div>
-            </div>
-
-            <button class="fleet-slider-arrow fleet-next-btn" aria-label="التالي">
-              <i class="ph-bold ph-caret-left"></i>
-            </button>
-          </div>
-        </div>
-
+      <!-- Centered CTA Button -->
+      <div class="text-center mt-10">
+        <a href="cars.html"
+          class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-red-500/30 transition duration-300 transform hover:-translate-y-0.5">
+          <span>استعرض جميع السيارات</span>
+          <i class="ph-bold ph-arrow-left text-lg"></i>
+        </a>
       </div>
 
     </div>
