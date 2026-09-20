@@ -3355,3 +3355,95 @@ body.dark-mode .catalog-hero-banner {
   background: linear-gradient(180deg, #05070a 0%, #0b0e14 100%) !important;
 }
 
+/* ============================
+   CATALOG PAGE RESPONSIVE GRID LAYOUT (4 CARS / ROW DESKTOP, 2 CARS / ROW MOBILE)
+   ============================ */
+.catalog-page .fleet-slider-outer {
+  padding-inline: 0 !important;
+}
+
+.catalog-page .fleet-slider-arrow,
+.catalog-page .fleet-swiper-pagination {
+  display: none !important;
+}
+
+.catalog-page .fleet-swiper {
+  padding: 0 0 24px 0 !important;
+}
+
+.catalog-page .swiper-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+  transform: none !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  flex-wrap: wrap !important;
+}
+
+.catalog-page .swiper-slide {
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  display: flex !important;
+}
+
+.catalog-page .swiper-slide .car-card {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Tablet & Mobile Grid Breakpoints */
+@media (max-width: 1100px) {
+  .catalog-page .swiper-wrapper {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-page .swiper-wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .catalog-page .car-card-body {
+    padding: 12px !important;
+  }
+
+  .catalog-page .car-card-title {
+    font-size: 0.95rem !important;
+  }
+
+  .catalog-page .car-brand-sub {
+    font-size: 0.72rem !important;
+  }
+
+  .catalog-page .btn-car-inquire {
+    padding: 8px 10px !important;
+    font-size: 0.78rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalog-page .swiper-wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .catalog-page .car-img-wrap {
+    padding: 8px !important;
+  }
+
+  .catalog-page .car-specs-row {
+    gap: 4px !important;
+    margin: 6px 0 !important;
+  }
+
+  .catalog-page .spec-pill {
+    padding: 3px 6px !important;
+    font-size: 0.7rem !important;
+  }
+}
+
+

@@ -623,6 +623,7 @@ function updatePanelSliderControls(panelKey) {
 
 function initFleetSliders() {
   if (typeof Swiper === 'undefined') return;
+  if (document.body && document.body.classList.contains('catalog-page')) return;
 
   Object.keys(fleetSwipers).forEach(key => {
     if (fleetSwipers[key] && typeof fleetSwipers[key].destroy === 'function') {
