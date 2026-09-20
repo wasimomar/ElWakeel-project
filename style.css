@@ -2606,9 +2606,9 @@ footer {
     min-height: max(460px, 70vh);
     padding-top: calc(var(--navbar-h) + 24px);
     padding-bottom: 48px;
-    background-image: url('images/Hero-background-mobile.png');
+    background-image: url('images/Hero-background-newMobile.png');
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     background-repeat: no-repeat;
   }
 
