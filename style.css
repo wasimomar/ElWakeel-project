@@ -1856,6 +1856,21 @@ body.dark-mode .car-speed-tag {
   background: var(--primary-glow);
 }
 
+.branch-map {
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+}
+
+.branch-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 /* ============================
    CONTACT SECTION
    ============================ */
@@ -1947,10 +1962,12 @@ body.dark-mode .car-speed-tag {
   display: flex;
   gap: 14px;
   margin-top: 4px;
+  width: 100%;
 }
 
 .payment-option {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2758,7 +2775,16 @@ footer {
   /* Contact */
   .form-grid { grid-template-columns: 1fr; }
   .form-group.full { grid-column: auto; }
-  .payment-options { flex-direction: column; }
+  .payment-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .payment-option {
+    flex: 0 0 auto;
+    width: 100%;
+    min-height: 50px;
+  }
 }
 
 /* ============================
